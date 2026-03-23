@@ -8,19 +8,14 @@ const itemRoutes = require("./routes/items");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// ✅ CORS FIX FOR DEPLOYMENT
-const allowedOrigins = [
-  "http://localhost:3002",
-  "http://localhost:5173",
-  "https://your-frontend-url.vercel.app" 
-];
-
+// ✅ FINAL CORS FIX
 app.use(cors({
   origin: [
-    "http://localhost:3000",
     "http://localhost:5173",
-    "https://vercel.com/rajatha/lost-found-frontend/9pTiF97GR7moKpHUt6MJ42tJuH33" // ← your real Vercel URL
+    "http://localhost:3000",
+    "https://lost-found-frontend-sigma.vercel.app" // ✅ YOUR REAL FRONTEND URL
   ],
+  methods: ["GET", "POST", "DELETE"],
   credentials: true
 }));
 
