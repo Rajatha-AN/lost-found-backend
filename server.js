@@ -12,11 +12,15 @@ const PORT = process.env.PORT || 5000;
 const allowedOrigins = [
   "http://localhost:3002",
   "http://localhost:5173",
-  "https://your-frontend-url.vercel.app"
+  "https://your-frontend-url.vercel.app" 
 ];
 
 app.use(cors({
-  origin: "*",
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://vercel.com/rajatha/lost-found-frontend/9pTiF97GR7moKpHUt6MJ42tJuH33" // ← your real Vercel URL
+  ],
   credentials: true
 }));
 
