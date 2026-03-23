@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 5000;
 
 // ✅ CORS FIX FOR DEPLOYMENT
 const allowedOrigins = [
+  "http://localhost:3002",
   "http://localhost:5173",
   "https://your-frontend-url.vercel.app"
 ];
